@@ -20,12 +20,12 @@ public class CameraController : MonoBehaviour
         {
             if (Screen.width > 900 && !cameraSet)
             {
-                PixelCamera.assetsPPU = 22;
+             //   PixelCamera.assetsPPU = 22;
                 cameraSet = true;
             }
             else
             {
-                PixelCamera.assetsPPU = 26;
+               // PixelCamera.assetsPPU = 26;
                 cameraSet = true;
             }
         }

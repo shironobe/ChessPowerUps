@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - FadePanel
+  - Pushable
+  - PowerUp
+  - RestartPopup
+  - ExitDoor
+  - Ban
   layers:
   - Default
   - TransparentFX
@@ -11,12 +17,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - wall
+  - Block
+  - Player
+  - Ban_Button
+  - ExitDoor
+  - Hole
   - 
   - 
   - 
