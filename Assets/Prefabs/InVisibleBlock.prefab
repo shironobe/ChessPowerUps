@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7862556757669071204}
   m_Layer: 7
   m_Name: InVisibleBlock
-  m_TagString: Pushable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -44,12 +44,12 @@ public class Hole : MonoBehaviour
                 other.gameObject.GetComponent<PushableBlock>().enabled = false;
                 other.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
-
+                AudioManager.instance.PlaySfx(4);
                 anim.SetBool("Fall", true);
 
                 // other.gameObject.GetComponent<PushableBlock>().BlockMask =
                 HoleObject.SetActive(false);
-               // AudioManager.instance.PlaySfx(2);
+               
             }
 
 

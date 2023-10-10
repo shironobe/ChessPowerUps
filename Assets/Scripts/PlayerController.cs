@@ -119,7 +119,7 @@ public class PlayerController : MonoBehaviour
             {
 
 
-                anim.SetBool("isMoving", false);
+               // anim.SetBool("isMoving", false);
 
                 // SnakeMove.instance.snakeMove();
                 //Debug.Log(Input.GetAxisRaw("Horizontal"));
@@ -223,13 +223,13 @@ public class PlayerController : MonoBehaviour
                 //   SnakeMove.instance.snakeMove();
                 if (!usePowerUp)
                 {
-                    anim.SetBool("isMoving", true);
+                  //  anim.SetBool("isMoving", true);
                     isMoving = true;
                     transform.position = Vector3.MoveTowards(transform.position, Destination, speed * Time.deltaTime);
                 }
                 else
                 {
-                    anim.SetBool("isMoving", true);
+                   // anim.SetBool("isMoving", true);
                     isMoving = true;
                     transform.position = Vector3.MoveTowards(transform.position, Destination, PowerUpSpeed * Time.deltaTime);
 
@@ -261,6 +261,7 @@ public class PlayerController : MonoBehaviour
                     {
                         if (CheckDirectionRook(Vector3.right))
                         {
+                           
                             sr.flipX = false;
                             Destination = transform.position + Vector3.right;
                         }
@@ -376,6 +377,7 @@ public class PlayerController : MonoBehaviour
     {
         if (PowerUpCount > 0 && !usePowerUp)
         {
+            AudioManager.instance.PlaySfx(1);
             if (PowerUpCount > 0 && !usePowerUp)
             {
                 if (PowerUpName == "RightRook")
@@ -542,7 +544,7 @@ public class PlayerController : MonoBehaviour
 
 
               pushableBlock.Push(direction, speed);
-                AudioManager.instance.PlaySfx(3);
+             
                 // Destination = transform.position + direction;
 
                 return false;
@@ -615,7 +617,7 @@ public class PlayerController : MonoBehaviour
 
                 PushableBlock pushableBlock = hit.collider.GetComponent<PushableBlock>();
 
-
+                AudioManager.instance.PlaySfx(4);
 
                 if (!pushableBlock)
                     return false;
@@ -755,7 +757,7 @@ public class PlayerController : MonoBehaviour
         {
 
 
-
+            anim.SetTrigger("Won");
             StartCoroutine(NextLevel());
         }
 
@@ -789,7 +791,7 @@ public class PlayerController : MonoBehaviour
            // PlayerPrefs.SetInt("LevelUnlock", SceneManager.GetActiveScene().buildIndex + 1);
         }
         startlevel();
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.3f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         
     }

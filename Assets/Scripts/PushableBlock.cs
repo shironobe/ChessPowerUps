@@ -113,8 +113,8 @@ public class PushableBlock : MonoBehaviour
                    
 
                     destination = transform.position + direction;
-                  
-                   
+
+                    AudioManager.instance.PlaySfx(3);
                     isPushed = true;
                     Manager.instance.MovesLeft--;
                     PlayerController.instance.MovePlayer(direction);
@@ -327,7 +327,7 @@ public class PushableBlock : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, -direction, detectionRadiusForHook, BlockMask);
         // Debug.Log(hit);
 
-
+      
         //  Debug.DrawRay(transform.position, -direction);
         if (hit.collider != null)
         {

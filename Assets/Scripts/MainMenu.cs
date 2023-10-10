@@ -17,14 +17,14 @@ public class MainMenu : MonoBehaviour
 
     public int LevelScreen;
 
-#if UNITY_WEBGL
+//#if UNITY_WEBGL
 
 
-    [DllImport("__Internal")]
-    private static extern void StartGameEvent();
+//    [DllImport("__Internal")]
+//    private static extern void StartGameEvent();
 
 
-#endif
+//#endif
 
     public Text Screenwidth;
     void Start()
@@ -59,7 +59,7 @@ public class MainMenu : MonoBehaviour
     private void startevent()
     {
 
-      StartGameEvent();
+     // StartGameEvent();
 
     }
 

@@ -30,8 +30,8 @@ public class BanBlock : MonoBehaviour
     void Start()
     {
        sr=GetComponent<SpriteRenderer>();
-       // SceneTransition = GameObject.FindGameObjectWithTag("FadePanel").GetComponent<Animator>();
-
+        // SceneTransition = GameObject.FindGameObjectWithTag("FadePanel").GetComponent<Animator>();
+        open = true;
     }
 
     // Update is called once per frame
@@ -55,7 +55,7 @@ public class BanBlock : MonoBehaviour
         if (sr.sprite == off && open)
         {
 
-            AudioManager.instance.PlaySfx(7);
+         
             open = false;
         }
 
@@ -63,25 +63,9 @@ public class BanBlock : MonoBehaviour
     }
 
 
-    private void startlevel()
-    {
+   
 
-      //  StartLevelEvent(SceneManager.GetActiveScene().buildIndex + 1);
-
-    }
-
-    IEnumerator NextLevel()
-    {
-
-
-        // AudioManager.instance.PlaySfx(5);
-        yield return new WaitForSeconds(0f);
-
-        SceneTransition.SetTrigger("end");
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
-    }
+    
     public void CheckBans()
     {
 
@@ -108,7 +92,7 @@ public class BanBlock : MonoBehaviour
 
                 block2d.enabled = false;
                 sr.sprite = off;
-                
+              
                 // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
 

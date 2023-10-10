@@ -11,12 +11,12 @@ public class LevelSelect : MonoBehaviour
 
     Animator SceneTransition;
 
-#if UNITY_WEBGL
-    [DllImport("__Internal")]
-    private static extern void StartLevelEvent(int level);
+//#if UNITY_WEBGL
+//    [DllImport("__Internal")]
+//    private static extern void StartLevelEvent(int level);
 
 
-#endif
+//#endif
     public Text Levelno;
 
     int level;
@@ -44,13 +44,13 @@ public class LevelSelect : MonoBehaviour
     {
 
         StartCoroutine(LoadLevel());
-      startlevel();
+     // startlevel();
     }
 
     private void startlevel()
     {
 
-        StartLevelEvent(level);
+      //  StartLevelEvent(level);
 
     }
 
